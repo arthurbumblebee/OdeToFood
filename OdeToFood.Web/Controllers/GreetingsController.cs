@@ -17,6 +17,7 @@ namespace OdeToFood.Web.Controllers
             model.Message = ConfigurationManager.AppSettings["message"];
 
             return View(model);
+
         }
     }
 }
