@@ -20,7 +20,7 @@ namespace OdeToFood.Web.API
 
         public IEnumerable<Restaurant> Get()
         {
-            var model = data.GetRestaurants();
+            var model = data.GetAllRestaurants();
             return model;
         }
     }

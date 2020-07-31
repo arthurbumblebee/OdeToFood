@@ -21,9 +21,14 @@ namespace OdeToFood.Data.Services
 
         }
 
-        public IEnumerable<Restaurant> GetRestaurants()
+        public IEnumerable<Restaurant> GetAllRestaurants()
         {
             return restaurants.OrderBy(restaurants => restaurants.Name);
+        }
+
+        public Restaurant GetRestaurant(int id)
+        {
+            return restaurants.FirstOrDefault(r => r.Id == id);
         }
     }
 }
