@@ -10,6 +10,7 @@ namespace OdeToFood.Data.Services
     {
         IEnumerable<Restaurant> GetAllRestaurants();
         Restaurant GetRestaurant(int id);
+        void AddRestaurant(Restaurant restaurant);
 
     }
 }
