@@ -27,6 +27,15 @@ namespace OdeToFood.Data.Services
             restaurant.Id = restaurants.Max(r => r.Id) + 1;
         }
 
+        public void DeleteRestaurant(int id)
+        {
+            var restaurant = GetRestaurant(id);
+            if (restaurant != null)
+            {
+                restaurants.Remove(restaurant);
+            }
+        }
+
         public IEnumerable<Restaurant> GetAllRestaurants()
         {
             return restaurants.OrderBy(restaurants => restaurants.Name);

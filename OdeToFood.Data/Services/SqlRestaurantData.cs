@@ -23,6 +23,13 @@ namespace OdeToFood.Data.Services
             database.SaveChanges();
         }
 
+        public void DeleteRestaurant(int id)
+        {
+            var restaurant = database.Restaurants.Find(id);
+            database.Restaurants.Remove(restaurant);
+            database.SaveChanges();
+        }
+
         public IEnumerable<Restaurant> GetAllRestaurants()
         {
             //return database.Restaurants
